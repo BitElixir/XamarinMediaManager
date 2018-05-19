@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -395,6 +395,11 @@ namespace Plugin.MediaManager
             {
                 BufferingChanged?.Invoke(this, new BufferingChangedEventArgs(0, TimeSpan.Zero));
             }
+        }
+
+        public Task SetRate(float rate = 1)
+        {
+            throw new NotImplementedException();
         }
     }
 }

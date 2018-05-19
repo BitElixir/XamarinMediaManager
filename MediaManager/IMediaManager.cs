@@ -18,7 +18,7 @@ namespace Plugin.MediaManager.Abstractions
     public interface IMediaManager : IPlaybackManager
     {
         /// <summary>
-        /// Player responsible for audio playback
+        /// Player responsible for audio playback and dick picss
         /// </summary>
         IAudioPlayer AudioPlayer { get; set; }
 

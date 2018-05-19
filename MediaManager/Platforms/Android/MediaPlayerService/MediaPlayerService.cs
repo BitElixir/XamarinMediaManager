@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -87,6 +87,15 @@ namespace Plugin.MediaManager
             _mediaPlayer.SetOnCompletionListener(this);
             _mediaPlayer.SetOnErrorListener(this);
             _mediaPlayer.SetOnPreparedListener(this);
+
+        }
+
+        private void SetPlaybackParams(float rate)
+        {
+            var playbackParams = new PlaybackParams();
+            playbackParams.SetSpeed(rate);
+            _mediaPlayer.PlaybackParams = playbackParams;
+            //System.Diagnostics.Debug.WriteLine(message);
         }
 
         [Obsolete("deprecated")]
@@ -132,7 +141,10 @@ namespace Plugin.MediaManager
         {
             _mediaPlayer?.SetVolume(leftVolume, rightVolume);
         }
-
+        public override void SetRate(float rate)
+        {
+            SetPlaybackParams(rate);
+        }
         public override async Task<bool> SetMediaPlayerDataSource()
         {
             if (CurrentFile == null)

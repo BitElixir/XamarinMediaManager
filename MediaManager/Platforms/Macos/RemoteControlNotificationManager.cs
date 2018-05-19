@@ -1,7 +1,7 @@
 ﻿using Foundation;
 using Plugin.MediaManager.Abstractions;
 using Plugin.MediaManager.Abstractions.Enums;
-using UIKit;
+//using UIKit;
 
 namespace Plugin.MediaManager
 {
@@ -9,17 +9,17 @@ namespace Plugin.MediaManager
     {
         public virtual void StartNotification(IMediaFile mediaFile)
         {
-            InvokeOnMainThread(() => {
-                UIApplication.SharedApplication.BeginReceivingRemoteControlEvents();
-            });
+            //InvokeOnMainThread(() => {
+            //    UIApplication.SharedApplication.BeginReceivingRemoteControlEvents();
+            //});
         }
 
         public virtual void StopNotifications()
         {
-            InvokeOnMainThread(() =>
-            {
-                UIApplication.SharedApplication.EndReceivingRemoteControlEvents();
-            });
+            //InvokeOnMainThread(() =>
+            //{
+            //    UIApplication.SharedApplication.EndReceivingRemoteControlEvents();
+            //});
         }
 
         public virtual void UpdateNotifications(IMediaFile mediaFile, MediaPlayerStatus status)

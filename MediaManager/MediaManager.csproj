@@ -7,6 +7,9 @@
     <RootNamespace>MediaManager</RootNamespace>
     <Description></Description>
     <PackageId>Plugin.MediaManager</PackageId>
+    <Company>Bit Elixir</Company>
+    <Authors>Bit Elixir</Authors>
+    <Version>0.5.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

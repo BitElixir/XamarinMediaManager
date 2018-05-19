@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -228,6 +228,11 @@ namespace Plugin.MediaManager
             }
 
             return MediaSource.CreateFromUri(new Uri(mediaFile.Url));
+        }
+
+        public Task SetRate(float rate = 1)
+        {
+            throw new NotImplementedException();
         }
     }
 }

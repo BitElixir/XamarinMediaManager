@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Android.App;
@@ -168,6 +168,7 @@ namespace Plugin.MediaManager
         public abstract Task Play(IEnumerable<IMediaFile> mediaFiles);
 
         public abstract void SetVolume(float leftVolume, float rightVolume);
+        public virtual void SetRate(float rate) { }
 
         public abstract Task<bool> SetMediaPlayerDataSource();
 

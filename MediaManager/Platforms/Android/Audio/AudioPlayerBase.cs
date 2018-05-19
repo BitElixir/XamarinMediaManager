@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Threading;
@@ -242,6 +242,12 @@ namespace Plugin.MediaManager
                 default:
                     return MediaPlayerStatus.Stopped;
             }
+        }
+
+        public async Task SetRate(float rate = 1)
+        {
+            await BinderReady();
+            GetMediaPlayerService().SetRate(rate);
         }
     }
 }

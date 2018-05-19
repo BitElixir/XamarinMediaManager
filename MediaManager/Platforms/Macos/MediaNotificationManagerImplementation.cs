@@ -1,8 +1,8 @@
-using Foundation;
+﻿using Foundation;
 using MediaPlayer;
 using Plugin.MediaManager.Abstractions;
 using Plugin.MediaManager.Abstractions.Enums;
-using UIKit;
+//using UIKit;
 
 namespace Plugin.MediaManager
 {
@@ -86,22 +86,22 @@ namespace Plugin.MediaManager
                 nowPlayingInfo.PlaybackRate = 0f;
             }
 
-            if (metadata.AlbumArt != null)
-            {
-                var cover = metadata.AlbumArt as UIImage;
-                if (cover != null)
-                {
-                    nowPlayingInfo.Artwork = new MPMediaItemArtwork(cover);
-                }
-            }
-            if (!string.IsNullOrEmpty(metadata.AlbumArtUri))
-            {
-                var cover = UIImage.LoadFromData(NSData.FromUrl(new NSUrl(metadata.AlbumArtUri)));
-                if (cover != null)
-                {
-                    nowPlayingInfo.Artwork = new MPMediaItemArtwork(cover);
-                }
-            }
+            //if (metadata.AlbumArt != null)
+            //{
+            //    var cover = metadata.AlbumArt as UIImage;
+            //    if (cover != null)
+            //    {
+            //        nowPlayingInfo.Artwork = new MPMediaItemArtwork(cover);
+            //    }
+            //}
+            //if (!string.IsNullOrEmpty(metadata.AlbumArtUri))
+            //{
+            //    var cover = UIImage.LoadFromData(NSData.FromUrl(new NSUrl(metadata.AlbumArtUri)));
+            //    if (cover != null)
+            //    {
+            //        nowPlayingInfo.Artwork = new MPMediaItemArtwork(cover);
+            //    }
+            //}
 
             return nowPlayingInfo;
         }

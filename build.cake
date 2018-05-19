@@ -8,7 +8,7 @@
 using Polly;
 
 var solutionName = "MediaManager";
-var repoName = "martijn00/XamarinMediaManager";
+var repoName = "BitElixir/XamarinMediaManager";
 var sln = new FilePath("./" + solutionName + ".sln");
 var outputDir = new DirectoryPath("./artifacts");
 var nuspecDir = new DirectoryPath("./nuspec");
@@ -120,40 +120,40 @@ Task("Build")
 
     var buildItems = new string[] 
     {
-        "./MvvmCross/MvvmCross.csproj",
-        "./MvvmCross.Android.Support/Fragment/MvvmCross.Droid.Support.Fragment.csproj",
-        "./MvvmCross.Android.Support/Design/MvvmCross.Droid.Support.Design.csproj",
-        "./MvvmCross.Android.Support/Core.Utils/MvvmCross.Droid.Support.Core.Utils.csproj",
-        "./MvvmCross.Android.Support/Core.UI/MvvmCross.Droid.Support.Core.UI.csproj",
-        "./MvvmCross.Android.Support/V7.AppCompat/MvvmCross.Droid.Support.V7.AppCompat.csproj",
-        "./MvvmCross.Android.Support/V7.Preference/MvvmCross.Droid.Support.V7.Preference.csproj",
-        "./MvvmCross.Android.Support/V7.RecyclerView/MvvmCross.Droid.Support.V7.RecyclerView.csproj",
-        "./MvvmCross.Android.Support/V14.Preference/MvvmCross.Droid.Support.V14.Preference.csproj",
-        "./MvvmCross.Android.Support/V17.Leanback/MvvmCross.Droid.Support.V17.Leanback.csproj",
-        "./MvvmCross.Plugins/Location/MvvmCross.Plugin.Location.csproj",
-        "./MvvmCross.Plugins/Location.Fused/MvvmCross.Plugin.Location.Fused.csproj",
-        "./MvvmCross.Plugins/PictureChooser/MvvmCross.Plugin.PictureChooser.csproj",
-        "./MvvmCross.Plugins/Email/MvvmCross.Plugin.Email.csproj",
-        "./MvvmCross.Plugins/Accelerometer/MvvmCross.Plugin.Accelerometer.csproj",
-        "./MvvmCross.Plugins/Color/MvvmCross.Plugin.Color.csproj",
-        "./MvvmCross.Plugins/FieldBinding/MvvmCross.Plugin.FieldBinding.csproj",
-        "./MvvmCross.Plugins/File/MvvmCross.Plugin.File.csproj",
-        "./MvvmCross.Plugins/Json/MvvmCross.Plugin.Json.csproj",
-        "./MvvmCross.Plugins/JsonLocalization/MvvmCross.Plugin.JsonLocalization.csproj",
-        "./MvvmCross.Plugins/Messenger/MvvmCross.Plugin.Messenger.csproj",
-        "./MvvmCross.Plugins/MethodBinding/MvvmCross.Plugin.MethodBinding.csproj",
-        "./MvvmCross.Plugins/Network/MvvmCross.Plugin.Network.csproj",
-        "./MvvmCross.Plugins/PhoneCall/MvvmCross.Plugin.PhoneCall.csproj",
-        "./MvvmCross.Plugins/PictureChooser/MvvmCross.Plugin.PictureChooser.csproj",
-        "./MvvmCross.Plugins/ResourceLoader/MvvmCross.Plugin.ResourceLoader.csproj",
-        "./MvvmCross.Plugins/ResxLocalization/MvvmCross.Plugin.ResxLocalization.csproj",
-        "./MvvmCross.Plugins/Share/MvvmCross.Plugin.Share.csproj",
-        "./MvvmCross.Plugins/Sidebar/MvvmCross.Plugin.Sidebar.csproj",
-        "./MvvmCross.Plugins/Visibility/MvvmCross.Plugin.Visibility.csproj",
-        "./MvvmCross.Plugins/WebBrowser/MvvmCross.Plugin.WebBrowser.csproj",
-        "./MvvmCross.Plugins/All/MvvmCross.Plugin.All.csproj",
-        "./MvvmCross.Forms/MvvmCross.Forms.csproj",
-        "./MvvmCross.Analyzers/CodeAnalysis/MvvmCross.CodeAnalysis.csproj"
+        "./MvvmCross-develop/MvvmCross/MvvmCross.csproj",
+        "./MvvmCross-develop/MvvmCross.Android.Support/Fragment/MvvmCross.Droid.Support.Fragment.csproj",
+        "./MvvmCross-develop/MvvmCross.Android.Support/Design/MvvmCross.Droid.Support.Design.csproj",
+        "./MvvmCross-develop/MvvmCross.Android.Support/Core.Utils/MvvmCross.Droid.Support.Core.Utils.csproj",
+        "./MvvmCross-develop/MvvmCross.Android.Support/Core.UI/MvvmCross.Droid.Support.Core.UI.csproj",
+        "./MvvmCross-develop/MvvmCross.Android.Support/V7.AppCompat/MvvmCross.Droid.Support.V7.AppCompat.csproj",
+        "./MvvmCross-develop/MvvmCross.Android.Support/V7.Preference/MvvmCross.Droid.Support.V7.Preference.csproj",
+        "./MvvmCross-develop/MvvmCross.Android.Support/V7.RecyclerView/MvvmCross.Droid.Support.V7.RecyclerView.csproj",
+        "./MvvmCross-develop/MvvmCross.Android.Support/V14.Preference/MvvmCross.Droid.Support.V14.Preference.csproj",
+        "./MvvmCross-develop/MvvmCross.Android.Support/V17.Leanback/MvvmCross.Droid.Support.V17.Leanback.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Location/MvvmCross.Plugin.Location.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Location.Fused/MvvmCross.Plugin.Location.Fused.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/PictureChooser/MvvmCross.Plugin.PictureChooser.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Email/MvvmCross.Plugin.Email.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Accelerometer/MvvmCross.Plugin.Accelerometer.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Color/MvvmCross.Plugin.Color.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/FieldBinding/MvvmCross.Plugin.FieldBinding.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/File/MvvmCross.Plugin.File.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Json/MvvmCross.Plugin.Json.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/JsonLocalization/MvvmCross.Plugin.JsonLocalization.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Messenger/MvvmCross.Plugin.Messenger.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/MethodBinding/MvvmCross.Plugin.MethodBinding.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Network/MvvmCross.Plugin.Network.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/PhoneCall/MvvmCross.Plugin.PhoneCall.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/PictureChooser/MvvmCross.Plugin.PictureChooser.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/ResourceLoader/MvvmCross.Plugin.ResourceLoader.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/ResxLocalization/MvvmCross.Plugin.ResxLocalization.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Share/MvvmCross.Plugin.Share.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Sidebar/MvvmCross.Plugin.Sidebar.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/Visibility/MvvmCross.Plugin.Visibility.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/WebBrowser/MvvmCross.Plugin.WebBrowser.csproj",
+        "./MvvmCross-develop/MvvmCross.Plugins/All/MvvmCross.Plugin.All.csproj",
+        "./MvvmCross-develop/MvvmCross.Forms/MvvmCross.Forms.csproj",
+        "./MvvmCross-develop/MvvmCross.Analyzers/CodeAnalysis/MvvmCross.CodeAnalysis.csproj"
     };
 
     // workaround for Xamarin.Android throwing AAPT error -2, instead of building sln :(

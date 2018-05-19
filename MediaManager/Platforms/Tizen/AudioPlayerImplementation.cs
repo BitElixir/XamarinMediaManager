@@ -1,3 +1,4 @@
+﻿using System.Threading.Tasks;
 using Plugin.MediaManager.Abstractions;
 
 namespace Plugin.MediaManager
@@ -6,6 +7,11 @@ namespace Plugin.MediaManager
     {
         public AudioPlayerImplementation(IVolumeManager volumeManager, IMediaExtractor mediaExtractor) : base(volumeManager, mediaExtractor)
         {
+        }
+
+        public Task SetRate(float rate = 1)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
