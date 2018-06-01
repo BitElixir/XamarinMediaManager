@@ -264,7 +264,6 @@ namespace Plugin.MediaManager
                 Status = MediaPlayerStatus.Buffering;
 
                 var playerItem = GetPlayerItem(nsUrl);
-
                 CurrentItem?.RemoveObserver(this, new NSString("status"));
 
                 Player.ReplaceCurrentItemWithPlayerItem(playerItem);
@@ -397,9 +396,21 @@ namespace Plugin.MediaManager
             }
         }
 
-        public Task SetRate(float rate = 1)
+        public async Task SetRate(float rate = 1)
         {
-            throw new NotImplementedException();
+            await Task.CompletedTask;
+
+            var cur = Player.CurrentItem;
+            var time = Player.CurrentTime;
+            Player.ReplaceCurrentItemWithPlayerItem(null);
+
+            Player.Rate = rate;
+            Player.ReplaceCurrentItemWithPlayerItem(new AVPlayerItem(cur.Asset)
+            {
+                AudioTimePitchAlgorithm = new NSString("TimeDomain"),
+
+            });
+            Player.Seek(time);
         }
     }
 }
